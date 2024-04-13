@@ -1,0 +1,95 @@
+.modalBackground {
+  width: 200vw;
+  height: 200vh;
+  background-color: rgba(0, 0, 0, 0.502);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalContainer {
+  width: 500px;
+  height: 220px;
+  border-radius: 12px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+}
+
+.modalContainer {
+  display: inline-block;
+  text-align: center;
+}
+.title {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  font-size: large;
+}
+
+.titleCloseBtn {
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  align-self: flex-end;
+}
+
+.modalContainer .body {
+  flex: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.7rem;
+  text-align: center;
+}
+
+.modalContainer .footer {
+  flex: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalContainer .footer button {
+  width: 150px;
+  height: 35px;
+  margin: 10px;
+  border: none;
+  background-color: cornflowerblue;
+  color: white;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#revoke {
+  background-color: crimson;
+}
+
+#selectNumber {
+  width: 371px;
+  height: 30px;
+  font-size: medium;
+}
+
+.accesslist {
+text-align: center;
+}
+
+/*.address {
+  display
+  margin: auto;
+  height: 30px;
+  width: 330px;
+  text-align: center;
+}
+*/
+input[type="text"]:focus {
+  background-color: lightblue;
+  outline: auto;
+} 

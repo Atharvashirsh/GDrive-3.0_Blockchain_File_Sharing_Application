@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+* {
+font-family: "Montserrat";
+}
+
+.top {
+  margin: 20px auto;
+  padding: 12px;
+  height: 60px;
+  align-items: center;
+  background-color: #4175a275;
+  border-radius: 10px;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.choose {
+  background-color: initial;
+  background-image: linear-gradient(-180deg, #5aff15, #00b712);
+  border-radius: 6px;
+  color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 6px;
+  padding: 10px;
+}
+.choose:hover {
+  box-shadow: rgba(253, 76, 0, 0.5) 0 3px 8px;
+}
+
+.textArea {
+  color: white;
+  font-size: 18px;
+  margin: 25px;
+}
+
+.upload {
+  border: 1px solid #13aa52;
+  background-color: #0c981c;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.upload:hover {
+  border: 1px solid #13aa52;
+  background-color: #3c965f;
+  color: #ffffff;
+}
+
+div {
+  padding: 5px 10px;
+}
+
+/* #file-upload, .upload {
+  width: 150px;
+  height: 40px;
+  background-color: #FBA834;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  justify-content: space-between;
+  transition: all 0.3s;
+}
+
+#file-upload:hover, #upload:hover {
+  opacity: 0.85;
+  transform: translateY(-4px);
+}
+
+.choose, .upload-label {
+  font-size: 20px;
+  line-height: 32px;
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 0 auto;
+}
+
+  */
+
+  .upload:disabled,
+  .upload[disabled] {
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #666666;
+  } 
