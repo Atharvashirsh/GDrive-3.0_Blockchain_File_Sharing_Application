@@ -40,6 +40,7 @@ contract Upload {
         string memory _fileName,
         string memory _fileHash
     ) external {
+        // Add file to mapping
         fileCounter++;
         value[_user].push(
             File(
@@ -53,6 +54,7 @@ contract Upload {
             )
         );
 
+        // map the file index to the user and the file hash
         fileCount = value[_user].length;
         fileIndex[_user][_fileHash] = fileCount - 1;
     }
