@@ -94,9 +94,14 @@ contract Upload {
         return accessList[msg.sender];
     }
 
-    function remove(string memory _fileHash, address _owner) external {
-        require(_owner == msg.sender, "You don't have access");
+    function remove(
+        string memory _fileHash,
+        address _owner
+    ) external returns (bool) {
+        // require(_owner == msg.sender, "You don't have access");
+        if (_owner != msg.sender) return false;
         uint index = fetchFileIndex(msg.sender, _fileHash);
         delete value[msg.sender][index];
+        return true;
     }
 }

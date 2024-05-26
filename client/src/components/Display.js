@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import "./Display.css";
 import { convertBytes } from "./helpers";
 import moment from "moment";
@@ -10,6 +10,17 @@ function isDeleted(arr) {
 
 const Display = ({ contract, account }) => {
     const [dataArray, setDataArray] = useState([]);
+    const isFirstRender = useRef(true);
+
+    useEffect(() => {
+        if (!isFirstRender.current) {
+            if (Object.keys(dataArray).length === 0) {
+                alert("No file to display");
+            }
+        }
+        isFirstRender.current = false;
+    }, [dataArray]);
+
     console.log("in Display");
     const getdata = async () => {
         console.log("in get data");
@@ -56,8 +67,8 @@ const Display = ({ contract, account }) => {
                         <th width="20px">Action</th>
                     </tr>
 
-                    {Object.keys(dataArray).length === 0
-                        ? alert("No file to display")
+                    {Object.keys(dataArray).length !== 0
+                        ? {}
                         : dataArray.map((item, i) => (
                               <>
                                   <tr style={isDeleted(item) ? { display: "none" } : { display: "" }}>
