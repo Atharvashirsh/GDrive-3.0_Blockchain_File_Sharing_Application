@@ -67,8 +67,8 @@ const Display = ({ contract, account }) => {
                         <th width="20px">Action</th>
                     </tr>
 
-                    {Object.keys(dataArray).length !== 0
-                        ? {}
+                    {Object.keys(dataArray).length === 0
+                        ? console.log()
                         : dataArray.map((item, i) => (
                               <>
                                   <tr style={isDeleted(item) ? { display: "none" } : { display: "" }}>
